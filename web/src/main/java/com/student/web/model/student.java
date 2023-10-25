@@ -4,14 +4,11 @@ package com.student.web.model;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Document(collection = "student")
 @Data
-
-public class student {
+public class Student {
    @Id
    private String id;
    private String admission_no;

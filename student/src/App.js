@@ -24,12 +24,6 @@ const handleSubmit = (e) => {
 
   if(validateform(formData)){
     alert("Form is submitted");
- 
-  console.log('Name:', formData.stud_name);
-    console.log('Date of Birth:', formData.dob);
-    console.log('Class:', formData.classValue);
-    console.log('Division:', formData.division);
-    console.log('Gender:', formData.gender);
     
        axios.post("http://localhost:8080/api/students",formData)
     .then(response=>{
@@ -64,7 +58,7 @@ const handleSubmit = (e) => {
 const validateform = (values)=>{
   let valid= true;
   const errors={}
-  if (!["stud_name"]){
+  if (!formData["stud_name"]){
     errors.stud_name="Name cannot left empty";
     valid=false;
   }
